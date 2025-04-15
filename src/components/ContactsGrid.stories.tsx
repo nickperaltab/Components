@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import ContactsGrid from './ContactsGrid';
 
 const meta: Meta<typeof ContactsGrid> = {
-  title: 'Components/ContactsGrid',
+  title: 'Components/Grid',
   component: ContactsGrid,
   parameters: {
     layout: 'centered',
