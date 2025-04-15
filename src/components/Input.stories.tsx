@@ -29,38 +29,73 @@ type Story = StoryObj<typeof Input>;
 
 export const Default: Story = {
   args: {
-    placeholder: 'Enter text',
+    placeholder: 'Enter text...',
   },
 };
 
 export const WithLabel: Story = {
   args: {
-    label: 'Label',
-    placeholder: 'Enter text',
+    label: 'Input Label',
+    placeholder: 'Enter text...',
   },
 };
 
 export const Required: Story = {
   args: {
-    label: 'Required field',
-    placeholder: 'Enter text',
+    label: 'Required Field',
     required: true,
-  },
-};
-
-export const WithValue: Story = {
-  args: {
-    label: 'Label',
-    value: 'Input text',
+    placeholder: 'Enter text...',
   },
 };
 
 export const WithError: Story = {
   args: {
-    label: 'Label',
+    label: 'Error State',
     error: true,
-    errorMessage: 'Error message goes here',
+    errorMessage: 'This field has an error',
     value: 'Invalid input',
+  },
+};
+
+export const TextArea: Story = {
+  args: {
+    label: 'Description',
+    placeholder: 'Enter your description...',
+    multiline: true,
+    minRows: 3,
+    maxRows: 6,
+  },
+};
+
+export const TextAreaWithValue: Story = {
+  args: {
+    label: 'Memo (Internal)',
+    placeholder: 'Enter internal notes...',
+    multiline: true,
+    minRows: 4,
+    value: 'This is a longer text that demonstrates how the textarea handles multiple lines of content. It will automatically resize based on content up to the maxRows limit.',
+  },
+};
+
+export const FixedHeightTextArea: Story = {
+  args: {
+    label: 'Customer Message',
+    placeholder: 'Enter message to customer...',
+    multiline: true,
+    rows: 4,
+    sx: { width: '400px' },
+  },
+};
+
+export const CharacterLimitedTextArea: Story = {
+  args: {
+    label: 'Limited Message',
+    placeholder: 'Enter your message...',
+    multiline: true,
+    minRows: 3,
+    maxRows: 5,
+    inputProps: { maxLength: 200 },
+    helperText: '200 character limit',
   },
 };
 
